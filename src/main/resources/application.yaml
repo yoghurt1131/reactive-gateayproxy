@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: foo_route
+          uri: https://foo.org
+          predicates:
+            - Host=foo.org
