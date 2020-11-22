@@ -8,6 +8,7 @@ class ReactiveGatewayproxyApplicationTests {
 
 	@Test
 	fun contextLoads() {
+        assert(true)
 	}
 
 }
