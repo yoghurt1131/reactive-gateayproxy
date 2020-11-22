@@ -6,3 +6,6 @@ spring:
           uri: https://foo.org
           predicates:
             - Host=foo.org
+application:
+  proxy:
+    auth-header-name: X-CUSTOMIZE-HEADER
