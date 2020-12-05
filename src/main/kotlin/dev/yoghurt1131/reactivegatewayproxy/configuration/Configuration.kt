@@ -1,6 +1,6 @@
 package dev.yoghurt1131.reactivegatewayproxy.configuration
 
-import dev.yoghurt1131.reactivegatewayproxy.application.filter.AddAuthHeaderFilter
+import dev.yoghurt1131.reactivegatewayproxy.application.filter.CustomizeHeaderGlobalFilter
 import dev.yoghurt1131.reactivegatewayproxy.application.request.AuthProxyHeaderSupplierImpl
 import dev.yoghurt1131.reactivegatewayproxy.application.request.ProxyHeaderSupplier
 import dev.yoghurt1131.reactivegatewayproxy.properties.ProxyProperties
@@ -22,8 +22,8 @@ class Configuration {
     }
 
     @Bean
-    fun addAuthHeaderFilter(proxyHeaderSuppliers: List<ProxyHeaderSupplier>): AddAuthHeaderFilter {
-        return AddAuthHeaderFilter(proxyHeaderSuppliers)
+    fun addAuthHeaderFilter(proxyHeaderSuppliers: List<ProxyHeaderSupplier>): CustomizeHeaderGlobalFilter {
+        return CustomizeHeaderGlobalFilter(proxyHeaderSuppliers)
     }
 
 }
